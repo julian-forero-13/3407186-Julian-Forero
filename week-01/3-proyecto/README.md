@@ -18,12 +18,12 @@ La ficha interactiva muestra la información principal de una tienda tecnológic
 La página está desarrollada usando JavaScript moderno (ES2023) con const, let, arrow functions, template literals y destructuring.
 
 ## 📚 Conceptos ES2023 Aplicados
-- [SI] Variables con let/const
-- [SI] Template literals
-- [SI] Arrow functions
-- [SI] Destructuring
-- [SI] Optional chaining (?.)
-- [SI] Nullish coalescing (??)
+- [ ] Variables con let/const
+- [ ] Template literals
+- [ ] Arrow functions
+- [ ] Destructuring
+- [ ] Optional chaining (?.)
+- [ ] Nullish coalescing (??)
 
 ## 🚀 Cómo Ejecutar
 1. Abrir el archivo index.html en el navegador.
