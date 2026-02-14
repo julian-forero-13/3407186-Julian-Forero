@@ -5,7 +5,7 @@
 - **Nombre**: [Julian David Forero Tilagui]
 - **Fecha**: [14/02/2026]
 - **Dominio Asignado**: [E-commerce de productos tecnologicos]
-- **Entidad Principal**: [Qué representa tu ficha]
+- **Entidad Principal**: [Gestion de ventas de productos tecnologicos]
 
 ## 🎯 Descripción
 La ficha interactiva muestra la información principal de una tienda tecnológica llamada TechZone Store, incluyendo:
