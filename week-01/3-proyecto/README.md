@@ -38,10 +38,10 @@ Independientemente de tu dominio, tu ficha debe incluir:
 
 ```javascript
 const exhibitData = {
-  name: 'Sistema Solar Interactivo',
-  description: 'Exhibición inmersiva del sistema solar',
-  code: 'EXH-001',
-  location: { room: 'Sala Principal', floor: 2 },
+  name: 'TechZone Store',
+  description: 'Tienda de productos tecnologicos',
+  code: 'TZS-103',
+  location: { room: 'Cuarto Tecnologico', floor: 3 },
   features: [
     { name: 'Proyección 360°', level: 95 },
     { name: 'Audio envolvente', level: 88 }
