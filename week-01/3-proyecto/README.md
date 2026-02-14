@@ -8,19 +8,30 @@
 - **Entidad Principal**: [Qué representa tu ficha]
 
 ## 🎯 Descripción
-[TechZone es una tienda virtual de productos tecnologicos]
+La ficha interactiva muestra la información principal de una tienda tecnológica llamada TechZone Store, incluyendo:
+- Nombre y descripción del negocio
+- Información de contacto (correo, teléfono y ubicación en Bogotá)
+- Lista de productos destacados con nivel de popularidad
+- Enlaces a redes sociales
+- Estadísticas comerciales como total de productos, disponibilidad, calificación y ventas mensuales
+- Funcionalidades interactivas como cambio de tema (claro/oscuro), copiar información y mostrar más productos
+La página está desarrollada usando JavaScript moderno (ES2023) con const, let, arrow functions, template literals y destructuring.
 
 ## 📚 Conceptos ES2023 Aplicados
-- [ ] Variables con let/const
-- [ ] Template literals
-- [ ] Arrow functions
-- [ ] Destructuring
-- [ ] Optional chaining (?.)
-- [ ] Nullish coalescing (??)
+- [SI] Variables con let/const
+- [SI] Template literals
+- [SI] Arrow functions
+- [SI] Destructuring
+- [SI] Optional chaining (?.)
+- [SI] Nullish coalescing (??)
 
 ## 🚀 Cómo Ejecutar
-1. Abrir index.html en el navegador
-
+1. Abrir el archivo index.html en el navegador.
+2. Verificar que el archivo script.js esté correctamente enlazado.
+3. Interactuar con:
+- Botón de cambio de tema
+- Botón copiar información
+- Botón mostrar más productos
 ## 📸 Screenshots
 [Agregar capturas de pantalla]
 
