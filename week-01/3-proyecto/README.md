@@ -41,16 +41,16 @@ La página está desarrollada usando JavaScript moderno (ES2023) con const, let,
 <img width="1908" height="981" alt="image" src="https://github.com/user-attachments/assets/2e018c5e-3127-4320-96ea-a289057fb2b9" />
 
 ## 🎯 Autoevaluación
-- Funcionalidad: [X]%
-- Código ES2023: [X]%
-- Código Limpio: [X]%
-- Adaptación al Dominio: [X]%
-- **Total Estimado**: [X]%
+- Funcionalidad: [100]%
+- Código ES2023: [100]%
+- Código Limpio: [90]%
+- Adaptación al Dominio: [100]%
+- **Total Estimado**: [97]%
 ```
 
 ### Plazos de Entrega
 
-- **Entrega**: Viernes de la semana correspondiente
+- **Entrega**: Sabado de la semana correspondiente
 - **Retroalimentación**: Dentro de 3 días hábiles
 - **Reentrega** (si aplica): Dentro de 5 días de recibir feedback
 
