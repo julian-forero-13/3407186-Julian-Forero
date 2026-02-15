@@ -33,7 +33,12 @@ La página está desarrollada usando JavaScript moderno (ES2023) con const, let,
 - Botón copiar información
 - Botón mostrar más productos
 ## 📸 Screenshots
-[Agregar capturas de pantalla]
+<img width="1900" height="1014" alt="Captura de pantalla 2026-02-14 195024" src="https://github.com/user-attachments/assets/2438ffd3-64f4-47fe-8dd5-d14a78a041b5" />
+<img width="1916" height="1008" alt="Captura de pantalla 2026-02-14 195042" src="https://github.com/user-attachments/assets/0fdaba3e-e263-4222-982f-9b6bc234a9a5" />
+<img width="1897" height="1015" alt="Captura de pantalla 2026-02-14 195053" src="https://github.com/user-attachments/assets/14002afa-072f-475e-b1ce-7c438432036c" />
+<img width="1919" height="1021" alt="Captura de pantalla 2026-02-14 195108" src="https://github.com/user-attachments/assets/51a87d36-90c7-49bf-ae01-6ff6a1c43109" />
+<img width="1919" height="1019" alt="Captura de pantalla 2026-02-14 195119" src="https://github.com/user-attachments/assets/7c3e34b0-f6c7-4d03-94cb-db1a4280ec35" />
+<img width="1908" height="981" alt="image" src="https://github.com/user-attachments/assets/2e018c5e-3127-4320-96ea-a289057fb2b9" />
 
 ## 🎯 Autoevaluación
 - Funcionalidad: [X]%
