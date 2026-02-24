@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestor TechZone</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<header class="header-top">
+
+<div>
+<h1>🛒 Gestor TechZone</h1>
+</div>
+
+<button id="theme-toggle">🌙</button>
+
+</header>
+
+<div class="stats">
+<span>Total: <b id="stat-total">0</b></span>
+<span>Disponibles: <b id="stat-active">0</b></span>
+</div>
+
+
+<!-- FORMULARIO -->
+<section class="card">
+
+<h2>Nuevo producto</h2>
+
+<form id="item-form">
+
+<input type="text" id="item-name" placeholder="Nombre" required>
+
+<textarea id="item-description" placeholder="Descripción"></textarea>
+
+<select id="item-category">
+<option value="laptop">Laptop</option>
+<option value="smartphone">Smartphone</option>
+<option value="accesorios">Accesorios</option>
+<option value="componentes">Componentes</option>
+<option value="consolas">Consolas</option>
+</select>
+
+<select id="item-priority">
+<option value="low">Baja</option>
+<option value="medium">Media</option>
+<option value="high">Alta</option>
+</select>
+
+<input type="text" id="item-brand" placeholder="Marca">
+<input type="number" id="item-price" placeholder="Precio">
+<input type="number" id="item-stock" placeholder="Stock">
+
+<button type="submit" id="submit-btn">Crear producto</button>
+
+</form>
+
+</section>
+
+
+<!-- PRODUCTOS -->
+<section class="card">
+
+<h2>Productos</h2>
+
+<div class="search-box">
+<input type="text" id="search-input" placeholder="Buscar producto...">
+</div>
+
+<div id="item-list"></div>
+<div id="empty-state">No hay productos</div>
+
+</section>
+
+
+<!-- ESTADISTICAS -->
+<section class="card">
+<h2>📊 Estadísticas</h2>
+<div id="stats-details"></div>
+</section>
+
+</div>
+
+<script src="./starter/script.js"></script>
+</body>
+</html>
