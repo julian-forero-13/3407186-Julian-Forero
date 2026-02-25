@@ -13,7 +13,11 @@ const entityData = {
   identifier: 'TECH-ECOM-001',
 
   contact: {
+<<<<<<< HEAD
     email: 'techzoneplatform@gmail.com',
+=======
+    email: 'soporte@techzone.com',
+>>>>>>> ec496e276c748a33c00749d63eb9b7659804086b
     phone: '+57 300 123 4567',
     location: 'Bogotá, Colombia'
   },
@@ -28,9 +32,15 @@ const entityData = {
   ],
 
   links: [
+<<<<<<< HEAD
     { platform: 'Instagram', url: 'https://www.instagram.com/techzone.sn?igsh=MXhkd3J6aGJuZGh4ZQ==', icon: '📸' },
     { platform: 'Facebook', url: 'https://facebook.com/techzone', icon: '📘' },
     { platform: 'WhatsApp', url: 'https://wa.me/573118515137', icon: '💬' }
+=======
+    { platform: 'Instagram', url: 'https://instagram.com/techzone', icon: '📸' },
+    { platform: 'Facebook', url: 'https://facebook.com/techzone', icon: '📘' },
+    { platform: 'WhatsApp', url: 'https://wa.me/573001234567', icon: '💬' }
+>>>>>>> ec496e276c748a33c00749d63eb9b7659804086b
   ],
 
   stats: {
