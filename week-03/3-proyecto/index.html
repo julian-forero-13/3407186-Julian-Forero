@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechZone - Sistema E-commerce</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+<header class="header">
+<h1>💻 TechZone Store</h1>
+<p class="subtitle">Gestión de productos tecnológicos</p>
+</header>
+
+
+<!-- TABS -->
+<nav class="tabs">
+
+<button class="tab-btn active" data-tab="catalog">
+📦 Productos
+</button>
+
+<button class="tab-btn" data-tab="users">
+👤 Usuarios
+</button>
+
+<button class="tab-btn" data-tab="orders">
+🛒 Pedidos
+</button>
+
+<button class="tab-btn" data-tab="stats">
+📊 Estadísticas
+</button>
+
+</nav>
+
+
+<main class="tab-content">
+
+<!-- PRODUCTOS -->
+<section id="catalog" class="tab-panel active">
+
+<div class="panel-header">
+<h2>Productos</h2>
+
+<button id="add-item-btn" class="btn btn-primary">
++ Agregar producto
+</button>
+
+</div>
+
+<div id="item-list" class="items-grid"></div>
+
+<div id="empty-state" class="empty-state">
+<p>No hay productos</p>
+</div>
+
+</section>
+
+
+
+<!-- USUARIOS -->
+<section id="users" class="tab-panel">
+
+<div class="panel-header">
+<h2>Usuarios</h2>
+
+<button id="add-user-btn" class="btn btn-primary">
++ Agregar usuario
+</button>
+
+</div>
+
+<div id="user-list" class="users-grid"></div>
+
+</section>
+
+
+
+<!-- PEDIDOS -->
+<section id="orders" class="tab-panel">
+
+<div class="panel-header">
+<h2>Pedidos</h2>
+</div>
+
+<div id="orders-list"></div>
+
+</section>
+
+
+
+<!-- STATS -->
+<section id="stats" class="tab-panel">
+
+<div class="panel-header">
+<h2>Estadísticas</h2>
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<span id="stat-total" class="stat-value">0</span>
+<span class="stat-label">Productos</span>
+</div>
+
+<div class="stat-card">
+<span id="stat-active" class="stat-value">0</span>
+<span class="stat-label">Disponibles</span>
+</div>
+
+<div class="stat-card">
+<span id="stat-inactive" class="stat-value">0</span>
+<span class="stat-label">No disponibles</span>
+</div>
+
+<div class="stat-card">
+<span id="stat-users" class="stat-value">0</span>
+<span class="stat-label">Usuarios</span>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- MODAL PRODUCTOS -->
+<div id="item-modal" class="modal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+<h3>Agregar Producto</h3>
+<button id="close-modal" class="close-btn">X</button>
+</div>
+
+<form id="item-form">
+
+<div class="form-group">
+<label>Tipo</label>
+<select id="item-type" required>
+<option value="">Seleccionar</option>
+<option value="Laptop">Laptop</option>
+<option value="Celular">Celular</option>
+<option value="Accesorio">Accesorio</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Nombre</label>
+<input type="text" id="item-name" required>
+</div>
+
+<div class="form-group">
+<label>Estado</label>
+<select id="item-status">
+<option value="active">Disponible</option>
+<option value="inactive">No disponible</option>
+</select>
+</div>
+
+<div class="form-actions">
+<button class="btn btn-primary">Guardar</button>
+<button type="button" id="cancel-btn" class="btn btn-danger">Cancelar</button>
+</div>
+
+</form>
+
+</div>
+</div>
+
+
+
+<!-- MODAL USUARIOS -->
+<div id="user-modal" class="modal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+<h3>Agregar Usuario</h3>
+<button id="close-user-modal" class="close-btn">X</button>
+</div>
+
+<form id="user-form">
+
+<div class="form-group">
+<label>Rol</label>
+<select id="user-role">
+<option value="Cliente">Cliente</option>
+<option value="Administrador">Administrador</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Nombre</label>
+<input type="text" id="user-name" required>
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input type="email" id="user-email" required>
+</div>
+
+<div class="form-actions">
+<button class="btn btn-primary">Guardar</button>
+<button type="button" id="cancel-user-btn" class="btn btn-danger">Cancelar</button>
+</div>
+
+</form>
+
+</div>
+</div>
+
+
+<script src="starter/script.js"></script>
+
+</div>
+</body>
+</html>
