@@ -2,225 +2,95 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechZone - Sistema E-commerce</title>
+<title>E-commerce Tecnológico</title>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<div class="app-container">
+<h1>🛒 E-commerce Tecnológico</h1>
 
-<header class="header">
-<h1>💻 TechZone Store</h1>
-<p class="subtitle">Gestión de productos tecnológicos</p>
-</header>
-
-
-<!-- TABS -->
-<nav class="tabs">
-
-<button class="tab-btn active" data-tab="catalog">
-📦 Productos
+<div class="buttons-top">
+<button class="btn btn-primary" onclick="abrirModalProducto()">
+Agregar Producto
 </button>
 
-<button class="tab-btn" data-tab="users">
-👤 Usuarios
+<button class="btn btn-primary" onclick="abrirModalUsuario()">
+Agregar Usuario
 </button>
+</div>
 
-<button class="tab-btn" data-tab="orders">
-🛒 Pedidos
-</button>
-
-<button class="tab-btn" data-tab="stats">
-📊 Estadísticas
-</button>
-
-</nav>
-
-
-<main class="tab-content">
-
-<!-- PRODUCTOS -->
-<section id="catalog" class="tab-panel active">
-
-<div class="panel-header">
 <h2>Productos</h2>
+<div id="itemList" class="grid"></div>
 
-<button id="add-item-btn" class="btn btn-primary">
-+ Agregar producto
-</button>
-
-</div>
-
-<div id="item-list" class="items-grid"></div>
-
-<div id="empty-state" class="empty-state">
-<p>No hay productos</p>
-</div>
-
-</section>
-
-
-
-<!-- USUARIOS -->
-<section id="users" class="tab-panel">
-
-<div class="panel-header">
 <h2>Usuarios</h2>
+<div id="userList" class="grid"></div>
 
-<button id="add-user-btn" class="btn btn-primary">
-+ Agregar usuario
-</button>
-
-</div>
-
-<div id="user-list" class="users-grid"></div>
-
-</section>
-
-
-
-<!-- PEDIDOS -->
-<section id="orders" class="tab-panel">
-
-<div class="panel-header">
 <h2>Pedidos</h2>
-</div>
+<div id="pedidoList" class="grid"></div>
 
-<div id="orders-list"></div>
-
-</section>
-
-
-
-<!-- STATS -->
-<section id="stats" class="tab-panel">
-
-<div class="panel-header">
 <h2>Estadísticas</h2>
+
+<div class="stats">
+<p>Total productos: <span id="statTotal">0</span></p>
+<p>Disponibles: <span id="statDisponible">0</span></p>
+<p>No disponibles: <span id="statNo">0</span></p>
+<p>Usuarios: <span id="statUsuarios">0</span></p>
 </div>
 
-<div class="stats-grid">
 
-<div class="stat-card">
-<span id="stat-total" class="stat-value">0</span>
-<span class="stat-label">Productos</span>
-</div>
-
-<div class="stat-card">
-<span id="stat-active" class="stat-value">0</span>
-<span class="stat-label">Disponibles</span>
-</div>
-
-<div class="stat-card">
-<span id="stat-inactive" class="stat-value">0</span>
-<span class="stat-label">No disponibles</span>
-</div>
-
-<div class="stat-card">
-<span id="stat-users" class="stat-value">0</span>
-<span class="stat-label">Usuarios</span>
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-
-<!-- MODAL PRODUCTOS -->
-<div id="item-modal" class="modal">
-
+<!-- MODAL PRODUCTO -->
+<div id="modalProducto" class="modal">
 <div class="modal-content">
 
-<div class="modal-header">
 <h3>Agregar Producto</h3>
-<button id="close-modal" class="close-btn">X</button>
-</div>
 
-<form id="item-form">
+<form id="formProducto">
 
-<div class="form-group">
-<label>Tipo</label>
-<select id="item-type" required>
-<option value="">Seleccionar</option>
-<option value="Laptop">Laptop</option>
-<option value="Celular">Celular</option>
-<option value="Accesorio">Accesorio</option>
-</select>
-</div>
+<input id="productoNombre" placeholder="Nombre" required>
+<input id="productoPrecio" type="number" placeholder="Precio" required>
 
-<div class="form-group">
-<label>Nombre</label>
-<input type="text" id="item-name" required>
-</div>
-
-<div class="form-group">
-<label>Estado</label>
-<select id="item-status">
-<option value="active">Disponible</option>
-<option value="inactive">No disponible</option>
-</select>
-</div>
-
-<div class="form-actions">
-<button class="btn btn-primary">Guardar</button>
-<button type="button" id="cancel-btn" class="btn btn-danger">Cancelar</button>
+<div class="modal-buttons">
+<button class="btn btn-success">Guardar</button>
+<button type="button" class="btn btn-secondary" onclick="cerrarModalProducto()">Cancelar</button>
 </div>
 
 </form>
-
 </div>
 </div>
 
 
-
-<!-- MODAL USUARIOS -->
-<div id="user-modal" class="modal">
-
+<!-- MODAL USUARIO -->
+<div id="modalUsuario" class="modal">
 <div class="modal-content">
 
-<div class="modal-header">
 <h3>Agregar Usuario</h3>
-<button id="close-user-modal" class="close-btn">X</button>
-</div>
 
-<form id="user-form">
+<form id="formUsuario">
 
-<div class="form-group">
-<label>Rol</label>
-<select id="user-role">
-<option value="Cliente">Cliente</option>
-<option value="Administrador">Administrador</option>
+<input id="usuarioNombre" placeholder="Nombre" required>
+<input id="usuarioEmail" placeholder="Email" required>
+
+<select id="usuarioRol">
+<option>Cliente</option>
+<option>Admin</option>
 </select>
-</div>
 
-<div class="form-group">
-<label>Nombre</label>
-<input type="text" id="user-name" required>
-</div>
-
-<div class="form-group">
-<label>Email</label>
-<input type="email" id="user-email" required>
-</div>
-
-<div class="form-actions">
-<button class="btn btn-primary">Guardar</button>
-<button type="button" id="cancel-user-btn" class="btn btn-danger">Cancelar</button>
+<div class="modal-buttons">
+<button class="btn btn-success">Guardar</button>
+<button type="button" class="btn btn-secondary" onclick="cerrarModalUsuario()">Cancelar</button>
 </div>
 
 </form>
-
 </div>
 </div>
-
 
 <script src="starter/script.js"></script>
+<script src="starter/producto.js"></script>
+<script src="starter/usuarios.js"></script>
+<script src="starter/pedidos.js"></script>
+<script src="starter/estadisticas.js"></script>
 
-</div>
 </body>
 </html>
