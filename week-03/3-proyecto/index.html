@@ -2,72 +2,74 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>E-commerce Tecnológico</title>
-
+<title>TechZone Store</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<h1>🛒 E-commerce Tecnológico</h1>
+<h1>TechZone Store</h1>
 
-<div class="buttons-top">
-<button class="btn btn-primary" onclick="abrirModalProducto()">
-Agregar Producto
-</button>
-
-<button class="btn btn-primary" onclick="abrirModalUsuario()">
-Agregar Usuario
-</button>
+<button id="themeToggle">🌙 Cambiar tema</button>
+<!-- BOTONES -->
+<div class="top-buttons">
+<button onclick="abrirModalProducto()">Agregar Producto</button>
+<button onclick="abrirModalUsuario()">Agregar Usuario</button>
 </div>
 
-<h2>Productos</h2>
-<div id="itemList" class="grid"></div>
-
-<h2>Usuarios</h2>
-<div id="userList" class="grid"></div>
-
-<h2>Pedidos</h2>
-<div id="pedidoList" class="grid"></div>
-
+<!-- ESTADISTICAS -->
+<section class="stats">
 <h2>Estadísticas</h2>
 
-<div class="stats">
-<p>Total productos: <span id="statTotal">0</span></p>
-<p>Disponibles: <span id="statDisponible">0</span></p>
-<p>No disponibles: <span id="statNo">0</span></p>
-<p>Usuarios: <span id="statUsuarios">0</span></p>
-</div>
+<div>Total productos: <span id="statTotal">0</span></div>
+<div>Disponibles: <span id="statDisponible">0</span></div>
+<div>No disponibles: <span id="statNo">0</span></div>
+<div>Usuarios: <span id="statUsuarios">0</span></div>
+
+</section>
+
+<!-- PRODUCTOS -->
+<section>
+<h2>Productos</h2>
+<div id="itemList" class="grid"></div>
+</section>
+
+<!-- USUARIOS -->
+<section>
+<h2>Usuarios</h2>
+<div id="userList" class="grid"></div>
+</section>
+
+<!-- PEDIDOS -->
+<section>
+<h2>Pedidos</h2>
+<div id="pedidoList" class="grid"></div>
+</section>
 
 
 <!-- MODAL PRODUCTO -->
 <div id="modalProducto" class="modal">
-<div class="modal-content">
 
-<h3>Agregar Producto</h3>
+<form id="formProducto" class="modal-content">
 
-<form id="formProducto">
+<h2>Agregar Producto</h2>
 
 <input id="productoNombre" placeholder="Nombre" required>
-<input id="productoPrecio" type="number" placeholder="Precio" required>
+<input id="productoPrecio" placeholder="Precio" required>
 
-<div class="modal-buttons">
-<button class="btn btn-success">Guardar</button>
-<button type="button" class="btn btn-secondary" onclick="cerrarModalProducto()">Cancelar</button>
-</div>
+<button type="submit">Guardar</button>
+<button type="button" onclick="cerrarModalProducto()">Cerrar</button>
 
 </form>
-</div>
 </div>
 
 
 <!-- MODAL USUARIO -->
 <div id="modalUsuario" class="modal">
-<div class="modal-content">
 
-<h3>Agregar Usuario</h3>
+<form id="formUsuario" class="modal-content">
 
-<form id="formUsuario">
+<h2>Agregar Usuario</h2>
 
 <input id="usuarioNombre" placeholder="Nombre" required>
 <input id="usuarioEmail" placeholder="Email" required>
@@ -77,21 +79,20 @@ Agregar Usuario
 <option>Admin</option>
 </select>
 
-<div class="modal-buttons">
-<button class="btn btn-success">Guardar</button>
-<button type="button" class="btn btn-secondary" onclick="cerrarModalUsuario()">Cancelar</button>
-</div>
+<button type="submit">Guardar</button>
+<button type="button" onclick="cerrarModalUsuario()">Cerrar</button>
 
 </form>
 </div>
-</div>
 
+
+<!-- SCRIPTS -->
 <script src="starter/mainsystem.js"></script>
-<script src="starter/script.js"></script>
 <script src="starter/producto.js"></script>
 <script src="starter/usuarios.js"></script>
 <script src="starter/pedidos.js"></script>
 <script src="starter/estadisticas.js"></script>
+<script src="starter/script.js"></script>
 
 </body>
 </html>

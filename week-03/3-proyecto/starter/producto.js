@@ -6,28 +6,28 @@ itemList.innerHTML="";
 
 productos.forEach((p,index)=>{
 
-const card=document.createElement("div");
-card.className="card";
+itemList.innerHTML+=`
+<div class="card">
 
-card.innerHTML=`
 <h3>${p.nombre}</h3>
 <p>$${p.precio}</p>
-<p>${p.disponible ? "Disponible":"No disponible"}</p>
+<p>${p.disponible?"Disponible":"No disponible"}</p>
 
-<button class="btn btn-primary" onclick="hacerPedido(${index})">
-Pedir producto
+<button class="btn-primary" onclick="hacerPedido(${index})">
+Pedir
 </button>
 
-<button class="btn btn-warning" onclick="toggleDisponible(${index})">
-Cambiar estado
+<button class="btn-warning" onclick="toggleDisponible(${index})">
+Estado
 </button>
 
-<button class="btn btn-danger" onclick="eliminarProducto(${index})">
+<button class="btn-danger" onclick="eliminarProducto(${index})">
 Eliminar
 </button>
+
+</div>
 `;
 
-itemList.appendChild(card);
 });
 
 guardarProductos();
@@ -47,11 +47,10 @@ renderProductos();
 
 function eliminarProducto(index){
 
-if(confirm("Eliminar producto?")){
+if(confirm("Eliminar producto")){
 productos.splice(index,1);
 renderProductos();
 }
-
 }
 
 function toggleDisponible(index){

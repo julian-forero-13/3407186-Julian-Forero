@@ -6,20 +6,20 @@ userList.innerHTML="";
 
 usuarios.forEach((u,index)=>{
 
-const card=document.createElement("div");
-card.className="card";
+userList.innerHTML+=`
+<div class="card">
 
-card.innerHTML=`
 <h3>${u.nombre}</h3>
 <p>${u.email}</p>
 <p>${u.rol}</p>
 
-<button class="btn btn-danger" onclick="eliminarUsuario(${index})">
+<button class="btn-danger" onclick="eliminarUsuario(${index})">
 Eliminar
 </button>
+
+</div>
 `;
 
-userList.appendChild(card);
 });
 
 guardarUsuarios();
@@ -39,11 +39,10 @@ renderUsuarios();
 
 function eliminarUsuario(index){
 
-if(confirm("Eliminar usuario?")){
+if(confirm("Eliminar usuario")){
 usuarios.splice(index,1);
 renderUsuarios();
 }
-
 }
 
 function guardarUsuarios(){
