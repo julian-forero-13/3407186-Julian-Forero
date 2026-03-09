@@ -171,3 +171,5 @@ R: Si tu dominio es distinto, aplica la misma lógica: elige una entidad princip
 
 ⬅️ [Volver a Prácticas](../2-practicas/)
 ➡️ [Semana 2: Variables y Tipos de Datos](../../week-02/README.md)
+
+sexo
